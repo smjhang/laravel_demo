@@ -1,2 +1,1 @@
-## Laravel
-Laravel demo & practice.
+This is my laravel practice and some demos.
