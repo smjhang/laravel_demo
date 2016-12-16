@@ -36,6 +36,12 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+
+        // 在使用 admin 之前需先經過 auth，故將兩個 middleware 結合
+        'auth_admin' => [
+            \Illuminate\Auth\Middleware\Authenticate::class,
+            \App\Http\Middleware\CheckAdmin::class
+        ],
     ];
 
     /**
